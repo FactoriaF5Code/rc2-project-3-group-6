@@ -1,0 +1,2 @@
+# Rural Camp 2
+
