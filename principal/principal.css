@@ -1,87 +1,93 @@
 :root {
-    --mainColor: #8CFFDA;
-    --secondColor: #FFB2E6;
-    --thirdColor: #D972FF;
-    --fourthColor: #8447FF;
-    --fifthColor: #FFFFE8;
+  --mainColor: #8cffda;
+  --secondColor: #ffb2e6;
+  --thirdColor: #d972ff;
+  --fourthColor: #8447ff;
+  --fifthColor: #ffffe8;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 header {
-    background-color: var(--mainColor);
-    height: 10vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  background-color: var(--mainColor);
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .logo {
-    width: 6%;
-    position: absolute;
-    left: 2rem;
+  width: 6%;
+  position: absolute;
+  left: 2rem;
 }
 
 .texto {
-    width: 30%;
+  width: 30%;
 }
 
 .muñecos {
-    width: 10%;
+  width: 10%;
 }
 
 .button {
-    width: 8%;
+  width: 8%;
 }
 
 main {
-    background-image: url(/img/portada.png);
-    height: 90vh;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+  background-image: url(/img/portada.png);
+  height: 90vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 section {
-    background-color: #D972FF;
-    width: 70%;
-    height: 60vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    border: 1px solid #000;
-    background: linear-gradient(180deg, #FFB2E6 0%, #FFB2E6 0.01%, #F5F5F5 97.4%);
-    box-shadow: -4px 4px 0px 5px #000;
+  background-color: #d972ff;
+  width: 70%;
+  min-height: 60vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid #000;
+  background: linear-gradient(180deg, #ffb2e6 0%, #ffb2e6 0.01%, #f5f5f5 97.4%);
+  -webkit-box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 1);
+  box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 1);
 }
 
 .muñecos {
-    height: 30vh;
-    width: 15%;
+  width: 15%;
 }
 
 div {
-    display: flex;
-    width: 70%;
-    height: 10vh;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 4%;
+  display: flex;
+  width: 70%;
+  min-height: 20vh;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 4%;
 }
 
 .cassette {
-    width: 100%;
-
+  width: 100%;
 }
 
 button {
-    background-color: rgba(0, 0, 0, 0);
-    width: 10%;
-    border: 0;
-    padding: 0;
-    cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  width: 10%;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
 }
