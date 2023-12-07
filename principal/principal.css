@@ -19,7 +19,7 @@
 
 header {
   background-color: var(--mainColor);
-  height: 10vh;
+  height: 15vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -45,7 +45,7 @@ header {
 
 main {
   background-image: url(/img/portada.png);
-  height: 90vh;
+  height: 85vh;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -65,6 +65,7 @@ section {
   -webkit-box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 1);
   -moz-box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 1);
   box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 1);
+  margin-top: 3rem;
 }
 
 .muñecos {
@@ -74,7 +75,7 @@ section {
 div {
   display: flex;
   width: 70%;
-  min-height: 20vh;
+  min-height: 15vh;
   justify-content: space-evenly;
   align-items: center;
   gap: 4%;
