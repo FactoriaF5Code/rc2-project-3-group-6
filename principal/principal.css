@@ -1,0 +1,30 @@
+:root {
+    --mainColor:   #8CFFDA;
+    --secondColor: #FFB2E6;
+    --thirdColor:  #D972FF;
+    --fourthColor: #8447FF;
+    --fifthColor:  #FFFFE8;
+}
+*{
+    box-sizing: border-box;
+    margin:0;
+}
+header{
+    background-color: var(--mainColor);
+    height: 6rem;
+    display: flex;
+    flex: justify-content;
+}
+.logo{
+    width: 6%;
+  }
+.texto{
+   width: 30%;
+} 
+.muñecos{
+    width:10%;
+}
+.button{
+    width:8%;
+}
+
