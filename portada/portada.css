@@ -3,6 +3,14 @@
   margin: 0;
 }
 
+:root {
+  --mainColor: #8cffda;
+  --secondColor: #ffb2e6;
+  --thirdColor: #d972ff;
+  --fourthColor: #8447ff;
+  --fifthColor: #ffffe8;
+}
+
 body {
   background-image: url(/img/portada.png);
   background-size: cover;
@@ -14,19 +22,6 @@ body {
   animation-iteration-count: infinite;
   -webkit-animation-direction: alternate;
   animation-direction: alternate;
-  animation: caidaDesdeArriba 1s ease-out;
-}
-
-@keyframes caidaDesdeArriba {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 @-webkit-keyframes slidein {
@@ -52,17 +47,33 @@ main {
 
 .logo {
   width: 23%;
+  animation: caidaDesdeArriba 2s ease-out;
+}
+
+@keyframes caidaDesdeArriba {
+  0% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .texto {
   width: 43%;
 }
 
+.container {
+width: 23%;
+}
 
 .barra-de-carga {
   width: 100%;
   height: 20px;
-  background-color: #f0f0f0;
+  background-color: var(--fifthColor);
   border-radius: 5px;
   overflow: hidden;
 }
@@ -70,7 +81,7 @@ main {
 .progreso {
   height: 100%;
   width: 0;
-  background-color: #4caf50;
+  background-color: var(--fourthColor);
   border-radius: 5px;
   animation: cargaAnimada 10s ease-in-out forwards;
 }
