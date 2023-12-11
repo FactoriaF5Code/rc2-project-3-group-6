@@ -1,8 +1,10 @@
 let boton1 = document.querySelector(".boton1");
 let personaje1 = document.querySelector(".funko1");
+let audio1 = document.querySelector(".audio1");
 
 boton1.onclick = function () {
     personaje1.classList.toggle("bailar");
+    audio1.toggleAttribute("muted");
 }
 
 let boton2 = document.querySelector(".boton2");
