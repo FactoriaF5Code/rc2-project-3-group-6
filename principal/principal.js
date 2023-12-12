@@ -83,6 +83,31 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("beforeunload", () => {
     stopAll();
   });
+
+  function aBailar(elemento) {
+    elemento.classList.toggle("bailar");
+  }
+
+  document.addEventListener("keydown", (e) => {
+    switch(e.key){
+      case "a":
+        toggleVolume("bateria");
+        aBailar(personaje1);
+        break;
+      case "s":
+        toggleVolume("bajo");
+        aBailar(personaje2);
+        break;
+      case "d":
+        toggleVolume("melodia");
+        aBailar(personaje3);
+        break;
+      case "f":
+        toggleVolume("vocales");
+        aBailar(personaje4);
+        break;
+    }
+  });
 });
 
 let boton1 = document.querySelector(".boton1");
@@ -112,3 +137,4 @@ let personaje4 = document.querySelector(".funko4");
 boton4.onclick = function () {
   personaje4.classList.toggle("bailar");
 };
+
