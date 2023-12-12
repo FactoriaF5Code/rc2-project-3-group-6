@@ -5,3 +5,10 @@ function redirigir() {
 }
 
 setTimeout(redirigir, tiempoEspera);
+
+let audioPortada = document.querySelector("audio");
+
+document.addEventListener('mousemove', function() {
+  audioPortada.play();
+
+})
