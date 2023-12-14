@@ -85,7 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document
     .querySelector(".boton8")
     .addEventListener("click", () => toggleVolume("vocales"));
-  
 
   // Detiene la reproducción al cerrar la ventana o cambiar de pestaña
   window.addEventListener("beforeunload", () => {
@@ -114,21 +113,19 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-let boton1 = document.querySelector(".boton1");
-let personaje1 = document.querySelector(".funko1");
+const boton1 = document.querySelector(".boton1");
+const boton2 = document.querySelector(".boton2");
+const boton3 = document.querySelector(".boton3");
+const boton4 = document.querySelector(".boton4");
+const boton5 = document.querySelector(".boton5");
+const boton6 = document.querySelector(".boton6");
+const boton7 = document.querySelector(".boton7");
+const boton8 = document.querySelector(".boton8");
 
-let boton2 = document.querySelector(".boton2");
-let personaje2 = document.querySelector(".funko2");
-
-let boton3 = document.querySelector(".boton3");
-let personaje3 = document.querySelector(".funko3");
-
-let boton4 = document.querySelector(".boton4");
-let personaje4 = document.querySelector(".funko4");
-let boton5 = document.querySelector(".boton5");
-let boton6 = document.querySelector(".boton6");
-let boton7 = document.querySelector(".boton7");
-let boton8 = document.querySelector(".boton8");
+const personaje1 = document.querySelector(".funko1");
+const personaje2 = document.querySelector(".funko2");
+const personaje3 = document.querySelector(".funko3");
+const personaje4 = document.querySelector(".funko4");
 
 function aBailar(elemento) {
   elemento.classList.toggle("bailar");
@@ -137,30 +134,24 @@ function aBailar(elemento) {
 boton1.onclick = function () {
   aBailar(personaje1);
 };
-
 boton2.onclick = function () {
   aBailar(personaje2);
 };
-
 boton3.onclick = function () {
   aBailar(personaje3);
 };
-
 boton4.onclick = function () {
   aBailar(personaje4);
 };
 boton5.onclick = function () {
   aBailar(personaje1);
 };
-
 boton6.onclick = function () {
   aBailar(personaje2);
 };
-
 boton7.onclick = function () {
   aBailar(personaje3);
 };
-
 boton8.onclick = function () {
   aBailar(personaje4);
 };

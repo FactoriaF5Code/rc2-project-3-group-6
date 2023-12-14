@@ -14,13 +14,13 @@
 body {
   background-image: url(/img/portada.png);
   background-size: cover;
-  animation: slidein 10s;
+  animation: movimientoFondo 10s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 
-@keyframes slidein {
+@keyframes movimientoFondo {
   from {
     background-position: top;
     background-size: 120%;
@@ -63,7 +63,7 @@ main {
 }
 
 .container {
-width: 23%;
+  width: 23%;
 }
 
 .barra-de-carga {
@@ -88,16 +88,44 @@ width: 23%;
   }
 }
 
-@media (max-width:390px) {
-  @keyframes slidein {
+@media (max-width: 540px) {
+  body {
+    background-size: auto 170vh;
+    animation: movimientoFondo 10s;
+  }
+
+  @keyframes movimientoFondo {
     from {
       background-position: top;
-      background-size: 200vh;
+      background-size: 170vh;
     }
     to {
-      background-position: -100px 0px;
-      background-size: 205vh;
+      background-position: -10px 0px;
+      background-size: 172vh;
+    }
+  }
+
+  .logo {
+    width: 40%;
+  }
+
+  .texto {
+    width: 75%;
+  }
+
+  .container {
+    width: 38%;
+  }
+
+  @keyframes caidaDesdeArriba {
+    0% {
+      transform: translateY(-300%);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
     }
   }
 }
-
