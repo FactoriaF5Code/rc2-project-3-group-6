@@ -73,6 +73,19 @@ document.addEventListener("DOMContentLoaded", () => {
   document
     .querySelector(".boton4")
     .addEventListener("click", () => toggleVolume("vocales"));
+  document
+    .querySelector(".boton5")
+    .addEventListener("click", () => toggleVolume("bateria"));
+  document
+    .querySelector(".boton6")
+    .addEventListener("click", () => toggleVolume("bajo"));
+  document
+    .querySelector(".boton7")
+    .addEventListener("click", () => toggleVolume("melodia"));
+  document
+    .querySelector(".boton8")
+    .addEventListener("click", () => toggleVolume("vocales"));
+  
 
   // Detiene la reproducción al cerrar la ventana o cambiar de pestaña
   window.addEventListener("beforeunload", () => {
@@ -112,6 +125,10 @@ let personaje3 = document.querySelector(".funko3");
 
 let boton4 = document.querySelector(".boton4");
 let personaje4 = document.querySelector(".funko4");
+let boton5 = document.querySelector(".boton5");
+let boton6 = document.querySelector(".boton6");
+let boton7 = document.querySelector(".boton7");
+let boton8 = document.querySelector(".boton8");
 
 function aBailar(elemento) {
   elemento.classList.toggle("bailar");
@@ -130,5 +147,20 @@ boton3.onclick = function () {
 };
 
 boton4.onclick = function () {
+  aBailar(personaje4);
+};
+boton5.onclick = function () {
+  aBailar(personaje1);
+};
+
+boton6.onclick = function () {
+  aBailar(personaje2);
+};
+
+boton7.onclick = function () {
+  aBailar(personaje3);
+};
+
+boton8.onclick = function () {
   aBailar(personaje4);
 };
