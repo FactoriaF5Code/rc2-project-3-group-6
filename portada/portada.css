@@ -14,17 +14,13 @@
 body {
   background-image: url(/img/portada.png);
   background-size: cover;
-  -webkit-animation: slidein 10s;
   animation: slidein 10s;
-  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
   animation-direction: alternate;
 }
 
-@-webkit-keyframes slidein {
+@keyframes slidein {
   from {
     background-position: top;
     background-size: 120%;
@@ -89,6 +85,19 @@ width: 23%;
 @keyframes cargaAnimada {
   to {
     width: 100%;
+  }
+}
+
+@media (max-width:390px) {
+  @keyframes slidein {
+    from {
+      background-position: top;
+      background-size: 200vh;
+    }
+    to {
+      background-position: -100px 0px;
+      background-size: 205vh;
+    }
   }
 }
 

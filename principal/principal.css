@@ -126,3 +126,40 @@ button {
     padding: 0;
     cursor: pointer;
 }
+
+@media (max-width:390px){
+    
+    header {
+        height: 10vh;
+    }
+    
+    .logo {
+        width: 15%;
+        left:1rem;
+    }
+
+    .texto {
+        width: 60%;
+        padding-left: 10%;
+    }
+
+    main {
+        height: 90vh;
+    }
+    
+    section {
+        background: none;
+        border: none;
+        box-shadow: none;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .personaje {
+        width: 40%;
+        
+    }
+    div {
+        display: none;
+    }
+}
+
