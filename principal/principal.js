@@ -12,26 +12,21 @@ document.addEventListener("DOMContentLoaded", () => {
   async function playAudio(fileName) {
     const filePath = `/audios/${fileName}.mp3`;
 
-    try {
-      const response = await fetch(filePath);
-      const buffer = await response.arrayBuffer();
-      const audioBuffer = await audioContext.decodeAudioData(buffer);
+    const response = await fetch(filePath);
+    const buffer = await response.arrayBuffer();
+    const audioBuffer = await audioContext.decodeAudioData(buffer);
 
-      const source = audioContext.createBufferSource();
-      source.buffer = audioBuffer;
+    const source = audioContext.createBufferSource();
+    source.buffer = audioBuffer;
 
-      source.gainNode = audioContext.createGain();
-      source.gainNode.gain.value = 0; // Iniciar muteado
-      source.connect(source.gainNode);
-      source.gainNode.connect(audioContext.destination);
+    source.gainNode = audioContext.createGain();
+    source.gainNode.gain.value = 0; // Iniciar muteado
+    source.connect(source.gainNode);
+    source.gainNode.connect(audioContext.destination);
 
-      source.loop = true; // Habilitar el bucle
+    source.loop = true; // Habilitar el bucle
 
-      return source;
-    } catch (error) {
-      console.error("Error al cargar el audio:", error);
-      return null;
-    }
+    return source;
   }
 
   async function init() {
@@ -78,18 +73,26 @@ document.addEventListener("DOMContentLoaded", () => {
   document
     .querySelector(".boton4")
     .addEventListener("click", () => toggleVolume("vocales"));
+  document
+    .querySelector(".boton5")
+    .addEventListener("click", () => toggleVolume("bateria"));
+  document
+    .querySelector(".boton6")
+    .addEventListener("click", () => toggleVolume("bajo"));
+  document
+    .querySelector(".boton7")
+    .addEventListener("click", () => toggleVolume("melodia"));
+  document
+    .querySelector(".boton8")
+    .addEventListener("click", () => toggleVolume("vocales"));
 
   // Detiene la reproducción al cerrar la ventana o cambiar de pestaña
   window.addEventListener("beforeunload", () => {
     stopAll();
   });
 
-  function aBailar(elemento) {
-    elemento.classList.toggle("bailar");
-  }
-
   document.addEventListener("keydown", (e) => {
-    switch(e.key){
+    switch (e.key) {
       case "a":
         toggleVolume("bateria");
         aBailar(personaje1);
@@ -110,31 +113,45 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-let boton1 = document.querySelector(".boton1");
-let personaje1 = document.querySelector(".funko1");
+const boton1 = document.querySelector(".boton1");
+const boton2 = document.querySelector(".boton2");
+const boton3 = document.querySelector(".boton3");
+const boton4 = document.querySelector(".boton4");
+const boton5 = document.querySelector(".boton5");
+const boton6 = document.querySelector(".boton6");
+const boton7 = document.querySelector(".boton7");
+const boton8 = document.querySelector(".boton8");
+
+const personaje1 = document.querySelector(".funko1");
+const personaje2 = document.querySelector(".funko2");
+const personaje3 = document.querySelector(".funko3");
+const personaje4 = document.querySelector(".funko4");
+
+function aBailar(elemento) {
+  elemento.classList.toggle("bailar");
+}
 
 boton1.onclick = function () {
-  personaje1.classList.toggle("bailar");
+  aBailar(personaje1);
 };
-
-let boton2 = document.querySelector(".boton2");
-let personaje2 = document.querySelector(".funko2");
-
 boton2.onclick = function () {
-  personaje2.classList.toggle("bailar");
+  aBailar(personaje2);
 };
-
-let boton3 = document.querySelector(".boton3");
-let personaje3 = document.querySelector(".funko3");
-
 boton3.onclick = function () {
-  personaje3.classList.toggle("bailar");
+  aBailar(personaje3);
 };
-
-let boton4 = document.querySelector(".boton4");
-let personaje4 = document.querySelector(".funko4");
-
 boton4.onclick = function () {
-  personaje4.classList.toggle("bailar");
+  aBailar(personaje4);
 };
-
+boton5.onclick = function () {
+  aBailar(personaje1);
+};
+boton6.onclick = function () {
+  aBailar(personaje2);
+};
+boton7.onclick = function () {
+  aBailar(personaje3);
+};
+boton8.onclick = function () {
+  aBailar(personaje4);
+};
