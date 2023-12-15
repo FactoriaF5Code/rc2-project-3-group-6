@@ -90,18 +90,18 @@ main {
 
 @media (max-width: 540px) {
   body {
-    background-size: auto 170vh;
+    background-size: auto 190vh;
     animation: movimientoFondo 10s;
   }
 
   @keyframes movimientoFondo {
     from {
       background-position: top;
-      background-size: 170vh;
+      background-size: 190vh;
     }
     to {
       background-position: -10px 0px;
-      background-size: 172vh;
+      background-size: 192vh;
     }
   }
 
