@@ -12,7 +12,7 @@
 }
 
 body {
-  background-image: url(/img/portada.png);
+  background-image: url(../img/portada.png);
   background-size: cover;
   animation: movimientoFondo 10s;
   animation-fill-mode: forwards;
