@@ -20,11 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
     source.buffer = audioBuffer;
 
     source.gainNode = audioContext.createGain();
-    source.gainNode.gain.value = 0; // Iniciar muteado
+    source.gainNode.gain.value = 0; 
     source.connect(source.gainNode);
     source.gainNode.connect(audioContext.destination);
 
-    source.loop = true; // Habilitar el bucle
+    source.loop = true; 
 
     return source;
   }
@@ -44,23 +44,21 @@ document.addEventListener("DOMContentLoaded", () => {
   function stopAll() {
     for (const key in audioFiles) {
       const gainNode = audioSources[key].gainNode;
-      gainNode.gain.value = 0; // Mute todas las pistas
+      gainNode.gain.value = 0; 
     }
   }
 
   function toggleVolume(key) {
     const gainNode = audioSources[key].gainNode;
-    gainNode.gain.value = 1 - gainNode.gain.value; // Toggle mute/desmute para la pista específica
+    gainNode.gain.value = 1 - gainNode.gain.value; 
   }
 
   init();
 
-  // Al hacer clic en cualquier lugar de la página, intenta iniciar todos los audios
   document.body.addEventListener("click", () => {
     startAll();
   });
 
-  // Agrega los eventos de clic a los botones para ajustar el volumen
   document
     .querySelector(".boton1")
     .addEventListener("click", () => toggleVolume("bateria"));
@@ -86,7 +84,6 @@ document.addEventListener("DOMContentLoaded", () => {
     .querySelector(".boton8")
     .addEventListener("click", () => toggleVolume("vocales"));
 
-  // Detiene la reproducción al cerrar la ventana o cambiar de pestaña
   window.addEventListener("beforeunload", () => {
     stopAll();
   });

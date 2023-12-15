@@ -13,7 +13,7 @@
 
 body {
   background-image: url(/img/portada.png);
-  background-size: cover;
+  background-size: 150%;
   animation: movimientoFondo 10s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
@@ -23,11 +23,11 @@ body {
 @keyframes movimientoFondo {
   from {
     background-position: top;
-    background-size: 120%;
+    background-size: 150%;
   }
   to {
     background-position: -100px 0px;
-    background-size: 125%;
+    background-size: 160%;
   }
 }
 
